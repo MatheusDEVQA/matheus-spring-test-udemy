@@ -31,6 +31,13 @@ public class PersonController {
         return services.findAll();
     }
 
-
+    @RequestMapping(value = "/{id}",
+            method = RequestMethod.GET,
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public Person create(
+            @RequestBody Person person) {
+        return services.create(person);
+    }
 
 }
