@@ -27,6 +27,7 @@ public class PersonServices {
         person.setGender("Male");
         return person;
     }
+
     public List<Person> findAll() {
 
         logger.info("Finding all people!");
@@ -42,6 +43,13 @@ public class PersonServices {
     public Person create(Person person) {
 
         logger.info("Creating one person!");
+
+        return person;
+    }
+
+    public Person update(Person person) {
+
+        logger.info("Updating one person!");
 
         return person;
     }
